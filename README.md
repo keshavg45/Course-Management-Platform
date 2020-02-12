@@ -25,3 +25,17 @@ submitting assignments, checking grades and other things. So, it gets somewhat
 difficult to keep track of everything in your head and that's why I hope to 
 create an application which removes these barriers and keeps everything in one 
 place.
+
+User Stories
+-----------------------------------------------------
+
+- As a user, I want to be able to add a course to the list of courses in
+ the current semester.
+
+- As a user, I want to be able to view all my courses in the current semester.
+
+- As a user, I want to be able to remove a course from the list of courses in
+ the current semester.
+
+- As a user, I want to be able to select a course and view its specific 
+ details such as number of credits, location or timing.
