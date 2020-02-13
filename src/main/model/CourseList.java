@@ -60,7 +60,7 @@ public class CourseList {
         return s;
     }
 
-    public Course get(int i) {
+    public Course getCourse(int i) {
         return courseList.get(i);
     }
 }

@@ -87,7 +87,7 @@ public class CourseApp {
         } else {
             System.out.println("List of courses: ");
             for (int i = 0; i < courseList.size(); i++) {
-                System.out.println(courseList.get(i).getCourseCode() + " " + courseList.get(i).getCourseNumber());
+                System.out.println(courseList.getCourse(i).getCourseCode() + " " + courseList.getCourse(i).getCourseNumber());
             }
         }
     }
@@ -104,8 +104,8 @@ public class CourseApp {
             int cn = sc.nextInt();
             int i = courseList.removeCourse(cc, cn);
             if (i != -1) {
-                System.out.println("Successfully removed " + courseList.get(i).getCourseCode()
-                        + " " + courseList.get(i).getCourseNumber() + "!");
+                System.out.println("Successfully removed " + courseList.getCourse(i).getCourseCode()
+                        + " " + courseList.getCourse(i).getCourseNumber() + "!");
                 courseList.remove(i);
             } else {
                 System.out.println("Invalid entry");
@@ -124,11 +124,11 @@ public class CourseApp {
             int cn = sc.nextInt();
             int i = courseList.viewCourse(cc,cn);
             if (i != -1) {
-                System.out.println("Course Code: " + courseList.get(i).getCourseCode());
-                System.out.println("Course Number: " + courseList.get(i).getCourseNumber());
-                System.out.println("Course Credits: " + courseList.get(i).getCourseCredits());
-                System.out.println("Course Location: " + courseList.get(i).getCourseLocation());
-                System.out.println("Course Timing: " + courseList.get(i).getCourseTiming());
+                System.out.println("Course Code: " + courseList.getCourse(i).getCourseCode());
+                System.out.println("Course Number: " + courseList.getCourse(i).getCourseNumber());
+                System.out.println("Course Credits: " + courseList.getCourse(i).getCourseCredits());
+                System.out.println("Course Location: " + courseList.getCourse(i).getCourseLocation());
+                System.out.println("Course Timing: " + courseList.getCourse(i).getCourseTiming());
             } else {
                 System.out.println("Invalid entry");
             }

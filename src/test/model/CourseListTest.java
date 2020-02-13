@@ -10,8 +10,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 // Unit tests for the Course class
 class CourseListTest {
     public CourseList courseList1;
-    public Course course1 = new Course("MATH",105,3,"BUCH A102",
-                "M W F 09:00 TO 10:00");
+    public Course courseForTest = new Course("CPSC",121,4,"HENN 202",
+            "M W F 14:00 TO 15:00");
+    public Course courseToBeTested;
 
     @BeforeEach
     public void setup (){
@@ -43,6 +44,25 @@ class CourseListTest {
         assertEquals(0, courseList1.removeCourse("CPSC", 121));
 
         assertEquals(2, courseList1.removeCourse("MATH", 105));
+
+        assertEquals(-1, courseList1.removeCourse("MATH", 104));
+
+        assertEquals(-1, courseList1.removeCourse("PSYC", 105));
+    }
+
+    @Test
+    public void testViewCourse() {
+        assertEquals(3, courseList1.size());
+
+        assertEquals(-1, courseList1.viewCourse("PHIL", 220));
+
+        assertEquals(0, courseList1.viewCourse("CPSC", 121));
+
+        assertEquals(2, courseList1.viewCourse("MATH", 105));
+
+        assertEquals(-1, courseList1.viewCourse("MATH", 104));
+
+        assertEquals(-1, courseList1.viewCourse("PSYC", 105));
     }
 
     @Test
@@ -50,5 +70,15 @@ class CourseListTest {
         assertEquals(3, courseList1.size());
 
         assertEquals(11, courseList1.totalCredits());
+    }
+
+    @Test
+    public void testGetCourse () {
+        courseToBeTested = courseList1.getCourse(0);
+        assertEquals(courseForTest.getCourseCode(), courseToBeTested.getCourseCode());
+        assertEquals(courseForTest.getCourseNumber(), courseToBeTested.getCourseNumber());
+        assertEquals(courseForTest.getCourseCredits(), courseToBeTested.getCourseCredits());
+        assertEquals(courseForTest.getCourseLocation(), courseToBeTested.getCourseLocation());
+        assertEquals(courseForTest.getCourseTiming(), courseToBeTested.getCourseTiming());
     }
 }
