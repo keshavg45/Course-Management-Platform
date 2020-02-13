@@ -87,7 +87,8 @@ public class CourseApp {
         } else {
             System.out.println("List of courses: ");
             for (int i = 0; i < courseList.size(); i++) {
-                System.out.println(courseList.getCourse(i).getCourseCode() + " " + courseList.getCourse(i).getCourseNumber());
+                System.out.println(courseList.getCourse(i).getCourseCode() + " "
+                        + courseList.getCourse(i).getCourseNumber());
             }
         }
     }
