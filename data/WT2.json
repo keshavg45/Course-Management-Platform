@@ -1,0 +1,32 @@
+{
+  "courseList": [
+    {
+      "courseCode": "MATH",
+      "courseNumber": 105,
+      "courseCredits": 3,
+      "courseLocation": "BUCH A102",
+      "courseTiming": "M W F 09:00 TO 10:00"
+    },
+    {
+      "courseCode": "PHIL",
+      "courseNumber": 220,
+      "courseCredits": 3,
+      "courseLocation": "BUCH A103",
+      "courseTiming": "M W F 10:00 TO 11:00"
+    },
+    {
+      "courseCode": "CPSC",
+      "courseNumber": 210,
+      "courseCredits": 4,
+      "courseLocation": "SWNG 222",
+      "courseTiming": "M W F 12:00 TO 13:00"
+    },
+    {
+      "courseCode": "CPSC",
+      "courseNumber": 121,
+      "courseCredits": 4,
+      "courseLocation": "HENN 202",
+      "courseTiming": "M W F 14:00 TO 15:00"
+    }
+  ]
+}

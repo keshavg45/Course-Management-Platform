@@ -1,0 +1,32 @@
+{
+  "courseList": [
+    {
+      "courseCode": "CPSC",
+      "courseNumber": 110,
+      "courseCredits": 4,
+      "courseLocation": "ESB 101",
+      "courseTiming": "T T 15:30 TO 15:00"
+    },
+    {
+      "courseCode": "MATH",
+      "courseNumber": 104,
+      "courseCredits": 3,
+      "courseLocation": "BUCH A102",
+      "courseTiming": "M W F 10:00 TO 11:00"
+    },
+    {
+      "courseCode": "LING",
+      "courseNumber": 101,
+      "courseCredits": 3,
+      "courseLocation": "BIOL 1000",
+      "courseTiming": "M W F 14:00 TO 15:00"
+    },
+    {
+      "courseCode": "GRSJ",
+      "courseNumber": 224,
+      "courseCredits": 3,
+      "courseLocation": "BUCH D217",
+      "courseTiming": "T T 14:00 TO 15:30"
+    }
+  ]
+}
