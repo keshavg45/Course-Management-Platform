@@ -7,7 +7,7 @@ import persistence.Writer;
 import java.io.IOException;
 import java.util.Scanner;
 
-// Course Management Platform
+// Course Management Platform (CMP)
 public class CourseApp {
     public static String COURSE_FILE;
     public CourseList courseList;
