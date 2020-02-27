@@ -2,10 +2,9 @@ package model;
 
 import model.Course;
 
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // Unit tests for the Course class
 class CourseListTest {
