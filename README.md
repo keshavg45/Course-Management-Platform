@@ -1,4 +1,4 @@
-# Course Management Platform (CMP)
+# Course Management Platform
 
 About
 -----------------------------------------------------
@@ -29,8 +29,6 @@ place.
 User Stories
 -----------------------------------------------------
 
-- As a user, I want to be able to enter my current semester.
-
 - As a user, I want to be able to add a course to the list of courses in
  the current semester.
 
@@ -42,11 +40,5 @@ User Stories
 - As a user, I want to be able to select a course and view its specific 
  details such as number of credits, location or timing.
  
-- As a user, I want to be able to see the total number of credits and total
+ - As a user, I want to be able to see the total number of credits and total
    number of courses I am taking this semester.
-
-- As a user, I want to be able to save my course load of the semester that I
- entered when the application started to file (eg. WT1.json).
-
-- As a user, I want to be able to load my course load of the semester that I
- entered when the program starts from file.
