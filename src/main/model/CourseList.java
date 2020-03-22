@@ -13,7 +13,7 @@ public class CourseList {
     /* REQUIRES: cc, cl and ct has a non-zero length
      *           cn and cc are > 0
      * MODIFIES: this
-     * EFFECTS: adds a new course to course lit
+     * EFFECTS: adds a new course to course list
      */
     public void addCourse(String cc, int cn, int cred, String cl, String ct) {
         courseList.add(new Course(cc, cn, cred, cl, ct));

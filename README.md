@@ -50,3 +50,57 @@ User Stories
  
  - As a user, I want to be able to load my course load of the semester that I
  entered when the program starts from file.
+
+Instructions for Grader
+-----------------------------------------------------
+
+- You can login with: 
+    - _username:_ **keshavg**
+    - _password:_ **qwerty**
+    - incorrect username or password will return _**Invalid Credentials!**_
+
+
+- You can choose the semester from the given four options: WT1, WT2, ST1 and ST2.
+  On the basis of the choice, the header text, total credits and total number of
+  courses are updated.
+    
+- You can add a course to the semester's course list by clicking on the
+  _**Add**_ button which will open a pop up window which will allow the user
+  to enter the details of a course.
+
+- You can remove a course from the semester's course list by selecting a
+  course and clicking on the _**Remove**_ button.
+
+- You can view the details of a course in the semester's course list by
+  selecting a course and clicking on the _**Details**_ button which will
+  open a pop up window which will allow the user to view the details of a
+  course.
+  
+- You can save any changes to the semester's course list by clicking on the
+  _**Save**_ button. If the _**Save**_ button isn't clicked, no changes will
+  be made to the course list.
+  
+- The semester's course list is dynamically loaded whenever a semester is
+  selected and thus the application doesn't require a dedicated _**Load**_ button.
+  
+- You can return to the semester selection page by clicking on the _**Back**_
+  button.
+   
+- You can locate my visual component by clicking on the _**View Logo**_ button on the
+  bottom right which opens a new pop up window with the .jpg file of the logo/icon
+  for my application.
+  
+- A short video is linked below showing the features of this application.  
+  
+Extra Information
+-----------------------------------------------------
+- I initially wanted to add sounds on button click, like pressing the
+ _**Log In**_ button plays a short sound but after spending quite a few hours
+ trying to incorporate that feature I came to know that Amazon Corretto 8
+ doesn't support JavaFX audio component thus I resorted to using a simple
+ image for the audiovisual requirement.
+    - Source: https://piazza.com/class/k4erikupq2efg?cid=1240
+    
+- A short video is linked below showing the working of the application:
+    - Video: https://drive.google.com/file/d/1if6eQo52HF4vMVOQbBnF5Bj9e0hphmW3/view?usp=sharing
+    - Please watch the video in 1080p if possible

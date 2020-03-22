@@ -64,4 +64,12 @@ class CourseTest {
         assertEquals("M W F 12:00 TO 13:00", course3.getCourseTiming());
         assertEquals("M W F 14:00 TO 15:00", course4.getCourseTiming());
     }
+
+    @Test
+    public void testGetCourseName() {
+        assertEquals("MATH 105", course1.getCourseName());
+        assertEquals("PHIL 220", course2.getCourseName());
+        assertEquals("CPSC 210", course3.getCourseName());
+        assertEquals("CPSC 121", course4.getCourseName());
+    }
 }

@@ -1,4 +1,4 @@
-package ui;
+package ui.oldconsoleapp;
 
 import model.CourseList;
 import persistence.Reader;

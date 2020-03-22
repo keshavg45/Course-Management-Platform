@@ -40,4 +40,8 @@ public class Course {
     public String getCourseTiming() {
         return courseTiming.toUpperCase();
     }
+
+    public String getCourseName() {
+        return courseCode.toUpperCase() + " " + courseNumber;
+    }
 }

@@ -1,0 +1,18 @@
+{
+  "courseList": [
+    {
+      "courseCode": "CPSC",
+      "courseNumber": 221,
+      "courseCredits": 4,
+      "courseLocation": "SOMEWHERE",
+      "courseTiming": "SOMETIME"
+    },
+    {
+      "courseCode": "CPSC",
+      "courseNumber": 213,
+      "courseCredits": 4,
+      "courseLocation": "SOMEWHERE",
+      "courseTiming": "SOMETIME"
+    }
+  ]
+}

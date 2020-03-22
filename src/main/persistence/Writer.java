@@ -23,6 +23,5 @@ public class Writer {
 
         gson.toJson(courseList, fileWriter);
         fileWriter.close();
-        System.out.println("Saved to " + path);
     }
 }
