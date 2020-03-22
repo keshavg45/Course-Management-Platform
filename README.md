@@ -95,9 +95,9 @@ Instructions for Grader
 Extra Information
 -----------------------------------------------------
 - I initially wanted to add sounds on button click, like pressing the
- _**Log In**_ button plays a short sound but after spending quite a few hours
+ _**Log In**_ button will play a short sound but after spending quite a few hours
  trying to incorporate that feature I came to know that Amazon Corretto 8
- doesn't support JavaFX audio component thus I resorted to using a simple
+ doesn't support JavaFX audio component thus I ended up using a simple
  image for the audiovisual requirement.
     - Source: https://piazza.com/class/k4erikupq2efg?cid=1240
     
