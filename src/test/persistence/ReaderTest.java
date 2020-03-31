@@ -6,7 +6,6 @@ import model.CourseList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.IOException;
 
 public class ReaderTest {

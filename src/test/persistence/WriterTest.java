@@ -3,6 +3,10 @@ package persistence;
 import model.CourseList;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import model.exceptions.CourseCodeExceedMaximumException;
+import model.exceptions.CourseCreditExceedMaximumException;
+import model.exceptions.CourseNumberExceedMaximumException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +20,7 @@ public class WriterTest {
     private Writer testWriter;
 
     @BeforeEach
-    void runBefore() {
+    void runBefore() throws CourseCodeExceedMaximumException, CourseCreditExceedMaximumException, CourseNumberExceedMaximumException {
         testWriter = new Writer();
         testCourseList1 = new CourseList();
         testCourseList1.addCourse("MATH",105, 3, "BUCH A102", "M W F 09:00 TO 10:00");

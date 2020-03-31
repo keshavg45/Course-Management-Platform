@@ -3,18 +3,27 @@ package model;
 import model.Course;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import model.exceptions.CourseCodeExceedMaximumException;
+import model.exceptions.CourseCreditExceedMaximumException;
+import model.exceptions.CourseNumberExceedMaximumException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 // Unit tests for the Course class
 class CourseListTest {
     public CourseList courseList1;
-    public Course courseForTest = new Course("CPSC",121,4,"HENN 202",
-            "M W F 14:00 TO 15:00");
+    public Course courseForTest;
     public Course courseToBeTested;
 
+    CourseListTest() throws CourseCodeExceedMaximumException, CourseCreditExceedMaximumException,
+            CourseNumberExceedMaximumException {
+        courseForTest = new Course("CPSC",121,4,"HENN 202",
+                "M W F 14:00 TO 15:00");
+    }
+
     @BeforeEach
-    public void setup (){
+    public void setup () throws CourseCodeExceedMaximumException, CourseCreditExceedMaximumException, CourseNumberExceedMaximumException {
         courseList1 = new CourseList();
         courseList1.addCourse("CPSC",121, 4, "HENN 202", "M W F 14:00 TO 15:00");
         courseList1.addCourse("CPSC",210, 4, "SWNG 222", "M W F 12:00 TO 13:00");

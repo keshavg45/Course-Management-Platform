@@ -1,6 +1,9 @@
 package ui.oldconsoleapp;
 
 import model.CourseList;
+import model.exceptions.CourseCodeExceedMaximumException;
+import model.exceptions.CourseCreditExceedMaximumException;
+import model.exceptions.CourseNumberExceedMaximumException;
 import persistence.Reader;
 import persistence.Writer;
 
@@ -53,7 +56,8 @@ public class CourseApp {
     }
 
     // MODIFIES: this, courseCount
-    public void doAddCourses() {
+    public void doAddCourses() throws CourseCodeExceedMaximumException, CourseCreditExceedMaximumException,
+            CourseNumberExceedMaximumException {
         printSemesterMessage();
         courseCount = sc.nextInt();
         for (int i = 0; i < courseCount; i++) {
@@ -203,7 +207,11 @@ public class CourseApp {
     // EFFECTS: displays menu of options to user
     public void processMenu(String command) {
         if (command.equals("a")) {
-            doAddCourses();
+            try {
+                doAddCourses();
+            } catch (Exception e) {
+                //
+            }
         } else if (command.equals("l")) {
             doListCourses();
         } else if (command.equals("r")) {

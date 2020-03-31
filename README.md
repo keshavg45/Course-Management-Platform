@@ -90,8 +90,31 @@ Instructions for Grader
   bottom right which opens a new pop up window with the .jpg file of the logo/icon
   for my application.
   
-- A short video is linked below showing the features of this application.  
-  
+- A short video is linked below showing the features of this application.
+
+Phase 4: Task 2
+----------------------------------------------------- 
+- I made my Course class robust, specifically the Course constructor
+ (_**/model/Course.java**_).
+- It checks for 4 additional things now:
+    - Invalid input type. (Unchecked)
+    - Any input error in course code. (Checked)
+    - Any input error in course number. (Checked)
+    - Any input error in course credit. (Checked)
+- The three exceptions are in the exceptions package (_**/model/exceptions/**_).
+- The Course constructor throws all the exceptions when called by the CourseList
+  method addCourse(...) and the method addCourse(...) further throws all the
+  exceptions when called by addButtonClicked() method in AddPopUpController
+  where it is ultimately caught and handled appropriately.
+- The CourseTest class tests:
+    - Unchecked exception in the setup() method.
+    - Checked exceptions in their own respective methods.
+    
+Phase 4: Task 3
+----------------------------------------------------- 
+- I could not find any places with too much coupling or poor cohesion, I have
+  posted on Piazza for help.
+    
 Extra Information
 -----------------------------------------------------
 - I initially wanted to add sounds on button click, like pressing the
@@ -103,4 +126,4 @@ Extra Information
     
 - A short video is linked below showing the working of the application:
     - Video: https://drive.google.com/file/d/1if6eQo52HF4vMVOQbBnF5Bj9e0hphmW3/view?usp=sharing
-    - Please watch the video in 1080p if possible
+    - Please watch the video in 1080p if possible.

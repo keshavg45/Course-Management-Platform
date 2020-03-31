@@ -2,6 +2,10 @@ package model;
 
 import model.Course;
 import static org.junit.jupiter.api.Assertions.*;
+
+import model.exceptions.CourseCodeExceedMaximumException;
+import model.exceptions.CourseCreditExceedMaximumException;
+import model.exceptions.CourseNumberExceedMaximumException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,16 +16,37 @@ class CourseTest {
     public Course course3;
     public Course course4;
 
+    // No exceptions expected in setup
     @BeforeEach
-    public void setup (){
-        course1 = new Course("math",105,3,"buch A102",
-                "m w f 09:00 to 10:00");
-        course2 = new Course("PHIL",220,3,"BUCH a103",
-                "m W f 10:00 to 11:00");
-        course3 = new Course("cpSC",210,4,"SWng 222",
-                "M W F 12:00 to 13:00");
-        course4 = new Course("CPsc",121,4,"henn 202",
-                "m w f 14:00 to 15:00");
+    public void setup () {
+        try {
+            course1 = new Course("math",105,3,"buch A102",
+                    "m w f 09:00 to 10:00");
+        } catch (CourseCodeExceedMaximumException | CourseNumberExceedMaximumException |
+                CourseCreditExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
+        try {
+            course2 = new Course("PHIL",220,3,"BUCH a103",
+                    "m W f 10:00 to 11:00");
+        } catch (CourseCodeExceedMaximumException | CourseNumberExceedMaximumException |
+                CourseCreditExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
+        try {
+            course3 = new Course("cpSC",210,4,"SWng 222",
+                    "M W F 12:00 to 13:00");
+        } catch (CourseCodeExceedMaximumException | CourseNumberExceedMaximumException |
+                CourseCreditExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
+        try {
+            course4 = new Course("CPsc",121,4,"henn 202",
+                    "m w f 14:00 to 15:00");
+        } catch (CourseCodeExceedMaximumException | CourseNumberExceedMaximumException |
+                CourseCreditExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
     }
 
     @Test
@@ -72,4 +97,53 @@ class CourseTest {
         assertEquals("CPSC 210", course3.getCourseName());
         assertEquals("CPSC 121", course4.getCourseName());
     }
-}
+
+    // Respective exceptions expected below
+    @Test
+    public void testCourseCodeExceedMaximumExceptionExpected() {
+        try {
+            Course testCourse = new Course("Cpscc",121,4,"henn 202",
+                    "m w f 14:00 to 15:00");
+        } catch (CourseCodeExceedMaximumException e) {
+            // expected
+        } catch (CourseCreditExceedMaximumException | CourseNumberExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
+    }
+
+    @Test
+    public void testCourseNumberExceedMaximumExceptionExpectedMoreThanThreeDigits() {
+        try {
+            Course testCourse = new Course("Cpsc",1211,4,"henn 202",
+                    "m w f 14:00 to 15:00");
+        } catch (CourseNumberExceedMaximumException e) {
+            // expected
+        } catch (CourseCreditExceedMaximumException | CourseCodeExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
+    }
+
+    @Test
+    public void testCourseNumberExceedMaximumExceptionExpectedLessThanThreeDigits() {
+        try {
+            Course testCourse = new Course("Cpsc",12,4,"henn 202",
+                    "m w f 14:00 to 15:00");
+        } catch (CourseNumberExceedMaximumException e) {
+            // expected
+        } catch (CourseCreditExceedMaximumException | CourseCodeExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
+    }
+
+    @Test
+    public void testCourseCreditExceedMaximumExceptionExpected() {
+        try {
+            Course testCourse = new Course("Cpsc",121,6,"henn 202",
+                    "m w f 14:00 to 15:00");
+        } catch (CourseCreditExceedMaximumException e) {
+            // expected
+        } catch (CourseCodeExceedMaximumException| CourseNumberExceedMaximumException e) {
+            fail("Did not expect exception");
+        }
+    }
+    }

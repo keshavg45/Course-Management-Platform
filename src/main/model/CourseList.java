@@ -1,5 +1,9 @@
 package model;
 
+import model.exceptions.CourseCodeExceedMaximumException;
+import model.exceptions.CourseCreditExceedMaximumException;
+import model.exceptions.CourseNumberExceedMaximumException;
+
 import java.util.ArrayList;
 
 public class CourseList {
@@ -15,7 +19,8 @@ public class CourseList {
      * MODIFIES: this
      * EFFECTS: adds a new course to course list
      */
-    public void addCourse(String cc, int cn, int cred, String cl, String ct) {
+    public void addCourse(String cc, int cn, int cred, String cl, String ct) throws NumberFormatException,
+            CourseCodeExceedMaximumException, CourseCreditExceedMaximumException, CourseNumberExceedMaximumException {
         courseList.add(new Course(cc, cn, cred, cl, ct));
     }
 
