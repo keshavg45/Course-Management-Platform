@@ -14,9 +14,7 @@ public class CourseList {
         courseList = new ArrayList<>();
     }
 
-    /* REQUIRES: cc, cl and ct has a non-zero length
-     *           cn and cc are > 0
-     * MODIFIES: this
+    /* MODIFIES: this
      * EFFECTS: adds a new course to course list
      */
     public void addCourse(String cc, int cn, int cred, String cl, String ct) throws NumberFormatException,
@@ -36,8 +34,7 @@ public class CourseList {
 
     // EFFECTS: returns index of the course to remove if found else returns -1
     public int removeCourse(String cc, int cn) {
-        int i;
-        for (i = 0; i < courseList.size(); i++) {
+        for (int i = 0; i < courseList.size(); i++) {
             if ((cc.equals(courseList.get(i).getCourseCode())) && (cn == courseList.get(i).getCourseNumber())) {
                 return i;
             }
@@ -47,8 +44,7 @@ public class CourseList {
 
     // EFFECTS: returns index of the course to view if found else returns -1
     public int viewCourse(String cc, int cn) {
-        int i;
-        for (i = 0; i < courseList.size(); i++) {
+        for (int i = 0; i < courseList.size(); i++) {
             if ((cc.equals(courseList.get(i).getCourseCode())) && (cn == courseList.get(i).getCourseNumber())) {
                 return i;
             }

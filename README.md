@@ -98,9 +98,9 @@ Phase 4: Task 2
  (_**/model/Course.java**_).
 - It checks for 4 additional things now:
     - Invalid input type. (Unchecked)
-    - Any input error in course code. (Checked)
-    - Any input error in course number. (Checked)
-    - Any input error in course credit. (Checked)
+    - Any discrepancies in course code input. (Checked)
+    - Any discrepancies in course number input. (Checked)
+    - Any discrepancies in course credit input. (Checked)
 - The three exceptions are in the exceptions package (_**/model/exceptions/**_).
 - The Course constructor throws all the exceptions when called by the CourseList
   method addCourse(...) and the method addCourse(...) further throws all the
@@ -112,8 +112,14 @@ Phase 4: Task 2
     
 Phase 4: Task 3
 ----------------------------------------------------- 
-- I could not find any places with too much coupling or poor cohesion, I have
-  posted on Piazza for help.
+- My UML Diagram is in the root folder named _'**CPSC210 Project.png**'_.
+- I could not find any places in my code with too much coupling or poor
+  cohesion, I believe the way I have coded it keeps every entity separate and
+  performs its own task. Like in my GUI I have made completely separate
+  controllers for different pages, even for the pop ups, thus adhering to strong
+  cohesion. And with regard to coupling, I have minimum associations and more 
+  dependencies as the list to be modified is updated in such a way that is passed
+  through the controllers and back to maintain a single point of control.
     
 Extra Information
 -----------------------------------------------------
