@@ -10,3 +10,10 @@ WT2 _(Winter Term 2)_, ST1 _(Summer Term 1)_, ST2 _(Summer Term 2)_. After
 entering the semester, students can add their **course code**, **course number**, 
 number of **credits** the course is worth. There will also be an option to add
 the **location** of the course and its **timing**.
+
+
+Screenshots
+-----------------------------------------------------
+![Login Page](https://github.com/keshavg45/Course-Management-Platform/blob/master/screenshots/1.JPG)
+![Home Page](https://github.com/keshavg45/Course-Management-Platform/blob/master/screenshots/2.JPG)
+![Term Page](https://github.com/keshavg45/Course-Management-Platform/blob/master/screenshots/3.JPG)
